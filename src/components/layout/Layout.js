@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-//import SEO from "../Seo"
+import Seo from "../Seo"
 import MyNavbar from "../navbar/MyNavbar"
 import Footer from "./Footer"
 
@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        {/* <SEO
+        <Seo
           title="Yu-He Ong Software Developer"
           keywords={[
             `gatsby`,
@@ -43,7 +43,7 @@ const Layout = ({ children }) => (
             `Javascript`,
             `Frontend Developer`,
           ]}
-        /> */}
+        />
         <MyNavbar />
         <div
           style={{
