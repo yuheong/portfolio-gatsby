@@ -6,9 +6,9 @@ import ProjectCard from "../components/portProjectCard/ProjectCard"
 
 import "./index.css"
 
-import project1Picture from "../images/portfolio/cabin.png"
-import project2Picture from "../images/portfolio/cake.png"
-import project3Picture from "../images/portfolio/game.png"
+import adhoccer from "../images/portfolio/adhoccer.png"
+import hero_app from "../images/portfolio/hero-app.jpeg"
+import gokartyourself from "../images/portfolio/gokartyourself.png"
 
 /*######### PROJECT OBJECTS TEMPLATE################
 import projectPicture from ""
@@ -21,101 +21,62 @@ const projectProject = {
 }
 #####################################################
 */
-
-//TODO: Make this into an array with objects and map through them instead down below.
-
-//Project 1
-
-const project1 = {
-  title: "MERN Job Listing Platform",
-  date: "October 2020",
-  decription:
-    "An adhoc jobs creation platform built in MERN (MongoDB, Express, React, Node) with simple CRUD-based APIs as well as basic CI/CD with unit testing.",
-  sourceURL: "https://github.com/yuheong/mern-adhoccer",
-  hostedURL: "https://adhoccer.netlify.app/",
-}
-
-//Project 2
-
-const project2 = {
-  title: "Project 2 title",
-  date: "2019-03-03",
-  decription:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat enim amet voluptatum, aut quisquam a, veritatis dolores odit adipisci corrupti tenetur optio. Aliquam incidunt dolor laborum tempore officia obcaecati.",
-  sourceURL: "https://github.com/",
-  hostedURL: "https://www.google.com",
-}
-
-//Project 3
-
-const project3 = {
-  title: "jumpBlob!",
-  date: "2019-02-12",
-  decription:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat enim amet voluptatum, aut quisquam a, veritatis dolores odit adipisci corrupti tenetur optio. Aliquam incidunt dolor laborum tempore officia obcaecati.",
-  sourceURL: "https://github.com/",
-  hostedURL: "https://www.google.com",
-}
+const projects = [
+  {
+    image: adhoccer,
+    title: "MERN Job Listing Platform",
+    date: "October 2020",
+    decription:
+      "An adhoc jobs creation platform built in MERN (MongoDB, Express, React, Node) with simple CRUD-based APIs as well as basic CI/CD with unit testing.",
+    sourceURL: "https://github.com/yuheong/mern-adhoccer",
+    hostedURL: "https://adhoccer.netlify.app/",
+  },
+  {
+    image: hero_app,
+    title: "HERO Deploy",
+    date: "January 2020",
+    decription:
+      "HERO Deploy is a platform that my team and I built to empower community members to assist in emergencies, such as providing CPR to nearby casualties. Emergency services can dispatch the nearest community responder through this app to assist with the victim. Our team created this platform for our UofTHacks VII Hackathon, which won the first prize. I created the application interface in React Native, and integrated the backend APIs developed by my other team members.",
+    sourceURL: "https://github.com/uofthacksvii-heroes/hero-deploy",
+    linkURL: "https://devpost.com/software/hero-10ozi8",
+  },
+  {
+    image: gokartyourself,
+    title: "GoKartYourself",
+    date: "June - August 2020",
+    decription:
+      "GoKartYourself is a 3D multiplayer racing game that was inspired by Mario Kart. It was developed using the Unity Game Engine and incorporated various features such as real time multiplayer and persistence of high scores and player settings.",
+    sourceURL: "https://github.com/",
+  },
+]
 
 export default () => (
   <div className="App">
     <Layout>
-      {/*########### MyJumbo PROPS ##########
-    title: The title of the jumbotron
-    body: The body of the Jumbotron
-    */}
       <MyJumbo
         title={"Projects Portfolio"}
-        body={"I love building stuff and here are some of my personal and school-based projects."}
+        body={
+          "I love building stuff and here are some of my personal and school-based projects."
+        }
       />
       <hr />
 
-      {/* TODO: Move the project objects into an array and map through them below. DRY is better. */}
-
       <Container style={{ marginTop: "2.5rem" }}>
-        {/*/Props: 
-      //imageSrcPath: the path to the image used 
-      //title: The title of the card/App 
-      //date: The date of the card
-      //description: Short description of the card 
-      //sourceURL: URL to the source code of the project 
-      //hostedURL: URL to the hosted version of the app*/}
-        <Row>
-          <Col>
-            <ProjectCard
-              imageSrcPath={project1Picture}
-              title={project1.title}
-              date={project1.date}
-              description={project1.decription}
-              sourceURL={project1.sourceURL}
-              hostedURL={project1.hostedURL}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <ProjectCard
-              imageSrcPath={project2Picture}
-              title={project2.title}
-              date={project2.date}
-              description={project2.decription}
-              sourceURL={project2.sourceURL}
-              hostedURL={project2.hostedURL}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <ProjectCard
-              imageSrcPath={project3Picture}
-              title={project3.title}
-              date={project3.date}
-              description={project3.decription}
-              sourceURL={project3.sourceURL}
-              hostedURL={project3.hostedURL}
-            />
-          </Col>
-        </Row>
+        {projects.map((project, index) => (
+          <Row>
+            <Col>
+              <ProjectCard
+                imageSrcPath={project.image}
+                title={project.title}
+                date={project.date}
+                description={project.decription}
+                sourceURL={project.sourceURL}
+                linkURL={project.linkURL}
+                hostedURL={project.hostedURL}
+              />
+            </Col>
+          </Row>
+        ))}
       </Container>
     </Layout>
   </div>

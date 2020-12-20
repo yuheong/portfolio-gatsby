@@ -20,7 +20,7 @@ const Footer = () => (
           <br />
           <p style={{ fontSize: "1.3rem" }}>
             I'm a young and curious developer that loves to code. I look forward
-            to building new and great products!
+            to building new and great products.
           </p>
         </Col>
       </Row>

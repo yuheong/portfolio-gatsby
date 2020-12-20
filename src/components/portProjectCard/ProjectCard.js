@@ -16,11 +16,11 @@ const ProjectCard = props => {
   return (
     <div className="project_container">
       <Row>
-        <Col>
+        <Col className="justify-content-center" style={{ display: "flex" }}>
           <img
             src={props.imageSrcPath}
             alt={"Smiley face"}
-            style={{ maxWidth: "100%" }}
+            style={{ maxWidth: "100%", maxHeight: "600px" }}
           />
         </Col>
         <Col>
@@ -30,11 +30,16 @@ const ProjectCard = props => {
             <small>{props.date}</small>
           </h4>
 
-          <p>{props.description}</p>
+          <p align="justify">{props.description}</p>
 
           <Row>
             <MyButton text={"Source Code"} URL={props.sourceURL} />
-            <MyButton text={"Hosted App"} URL={props.hostedURL} />
+            {props.hostedURL && (
+              <MyButton text={"Hosted App"} URL={props.hostedURL} />
+            )}
+            {props.linkURL && (
+              <MyButton text={"Link"} URL={props.linkURL} />
+            )}
           </Row>
         </Col>
       </Row>
