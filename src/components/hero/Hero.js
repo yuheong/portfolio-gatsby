@@ -11,7 +11,8 @@ const Hero = () => (
       <h1>Hey, I'm Yu-He, a Software Developer from Singapore.</h1>
       <br />
       <h3>
-        Currently I'm in my final year of studies as a Computer Science undergraduate at the National University of Singapore.
+        Currently I'm in my final year of studies as a Computer Science
+        undergraduate at the National University of Singapore.
       </h3>
       <p>
         Contact me at{" "}

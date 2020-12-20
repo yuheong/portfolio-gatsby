@@ -8,55 +8,38 @@ import "./index.css"
 
 import { Container, Row, Col } from "react-bootstrap"
 
-import CV from "/" //Import you CV file here!
-import other from "/" //Import other downloadable here
-
 export default () => (
   <div className="App">
     <Layout>
       <MyJumbo
-        body={
-          "So you are looking for a professional, communicative & punctual software engineer who likes to keep productive."
-        }
-        body2={"I can also do this cool thing if that's... needed."}
         title={"More about me."}
+        body={
+          "I'm a Computer Science student with an interest in Software Development and all things tech - from the latest gadgets to applications of technology to improve lives around the world."
+        }
+        body2={
+          "During my free time, I love to play games, play sports, travel (eventually...) and hang out with friends."
+        }
       />
       <hr />
       <Container fluid>
         <Row style={{ marginTop: "2rem", marginBottom: "1.5rem" }}>
-          {/* <MyButton text={"CV download"} URL={"https://abcd"} /> */}
-          {/* <MyButton text={"Other Downloadable"} URL={other} /> */}
-        </Row>
-        <Row>
-          <Col>
-            <h3>Summary</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            {/* <h5>I love Coffee. I mean, more than people normaly like coffee</h5> */}
-            <br />
-            <p>
-              I'm a Computer Science student with an interest in Software
-              Development and all things tech - from the latest gadgets to
-              applications of technology to improve lives around the world.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-              pariatur nobis ipsa laborum quae, fuga vel a, dolor consectetur
-              blanditiis explicabo dolorem quos sunt voluptatibus dicta commodi
-              temporibus magnam placeat.
-            </p>
-          </Col>
+          <MyButton
+            text={"CV download"}
+            URL={
+              "https://drive.google.com/file/d/1OCTO5Ro34zaZzXsPpzvmD9jMIyxdZLEZ/view?usp=sharing"
+            }
+          />
+          <MyButton
+            text={"Freelance Portfolio"}
+            URL={"https://tinyurl.com/yuhe-portfolio"}
+          />
         </Row>
         <hr />
-        {/* This is the beginning of the career section*/}
         <Row>
           <Col>
             <h3>Past work experience</h3>
           </Col>
         </Row>
-        {/* Position number 1*/}
         <Row>
           <Col>
             <h5>Software Engineer Intern</h5>
@@ -64,20 +47,20 @@ export default () => (
         </Row>
         <Row>
           <Col>Blockthrough, Toronto, Canada</Col>
-          <Col>2019.08 - 2020.07</Col>
+          <Col>August 2019 - July 2020</Col>
         </Row>
         <Row>
           <Col>
             <p style={{ marginTop: "1rem" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et iure
-              nisi consequuntur provident officia odio vitae, nam neque natus
-              debitis earum facere, quibusdam similique itaque sed, cumque
-              aliquam voluptas quos.
+              Enhanced and maintaining the company’s core ad-technology platform
+              built in NodeJS and vanilla JavaScript, and implemented custom
+              JavaScript logic on publisher websites to deliver Acceptable Ads
+              to adblock users. Also worked on integrating a new publisher
+              dashboard built with ReactJS and Golang.
             </p>
           </Col>
         </Row>
         <hr />
-        {/* SW intern Position*/}
         <Row>
           <Col>
             <h5>Software Product Manager Intern</h5>
@@ -85,15 +68,34 @@ export default () => (
         </Row>
         <Row>
           <Col>Savant Degrees Private Limited, Singapore</Col>
-          <Col>2019.06 - 2019.07</Col>
+          <Col>June 2019 - July 2019</Col>
         </Row>
         <Row>
           <Col>
             <p style={{ marginTop: "1rem" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              ullam eius nihil porro itaque nobis facere. Impedit eos minima
-              porro. Culpa, laboriosam! Qui quo provident aperiam et ullam odio
-              ex.
+              Involved in digital innovation projects for a diverse group of
+              clients, by contributing to various processes such as gathering
+              business requirements, software development and user acceptance
+              testing.
+            </p>
+          </Col>
+        </Row>
+        <hr />
+        <Row>
+          <Col>
+            <h5>Freelance App Developer</h5>
+          </Col>
+        </Row>
+        <Row>
+          <Col></Col>
+          <Col>January 2017 - June 2019</Col>
+        </Row>
+        <Row>
+          <Col>
+            <p style={{ marginTop: "1rem" }}>
+              Worked on various freelance projects for various clients by
+              creating mobile applications and games for event management
+              companies such as Eventas Asia.
             </p>
           </Col>
         </Row>
@@ -110,7 +112,7 @@ export default () => (
         </Row>
         <Row>
           <Col>National University of Singapore, Singapore</Col>
-          <Col>2017.08 - 2021.05</Col>
+          <Col>August 2017 - May 2021</Col>
         </Row>
         <Row>
           <Col>
@@ -122,12 +124,29 @@ export default () => (
         </Row>
         <Row>
           <Col>
+            <h5>NUS Overseas Colleges (Toronto)</h5>
+          </Col>
+        </Row>
+        <Row>
+          <Col>University of Toronto, Canada</Col>
+          <Col>August 2019 - July 2020</Col>
+        </Row>
+        <Row>
+          <Col>
+            <p style={{ marginTop: "1rem" }}>
+              <strong>Courses taken:</strong>
+              <br /> The Business of Software, Patent Analytics
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <h5>GCE 'A' Levels</h5>
           </Col>
         </Row>
         <Row>
           <Col>Nanyang Junior College, Singapore</Col>
-          <Col>2013.01 - 2014.12</Col>
+          <Col>January 2013 - December 2014</Col>
         </Row>
       </Container>
     </Layout>
